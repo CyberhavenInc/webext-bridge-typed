@@ -1,6 +1,6 @@
 {
-  "name": "webext-bridge",
-  "version": "6.0.1",
+  "name": "webext-bridge-typed",
+  "version": "1.0.0",
   "description": "Messaging in Web Extensions made easy. Out of the box.",
   "keywords": [
     "chrome",
@@ -18,15 +18,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zikaari/webext-bridge.git"
+    "url": "git+https://github.com/CyberhavenInc/webext-bridge-typed.git"
   },
   "author": "Neek Sandhu <neek.sandhu@outlook.com>",
-  "scripts": {
-    "build": "tsup src/index.ts src/background.ts src/content-script.ts src/devtools.ts src/options.ts src/popup.ts src/window.ts --format esm,cjs --dts",
-    "watch": "npm run build -- --watch",
-    "release": "bumpp --commit --push --tag && npm run build && npm publish"
-  },
   "type": "module",
+  "files": [
+    "README.md",
+    "package.json",
+    "dist/**/*"
+  ],
   "exports": {
     ".": {
       "import": "./dist/index.js",
@@ -82,20 +82,21 @@
       ]
     }
   },
-  "files": [
-    "README.md",
-    "package.json",
-    "dist/**/*"
-  ],
-  "bugs": {
-    "url": "https://github.com/zikaari/webext-bridge/issues"
+  "scripts": {
+    "build": "tsup src/index.ts src/background.ts src/content-script.ts src/devtools.ts src/options.ts src/popup.ts src/window.ts --format esm,cjs --dts",
+    "watch": "npm run build -- --watch",
+    "release": "bumpp --commit --push --tag && npm run build && npm publish"
   },
-  "homepage": "https://github.com/zikaari/webext-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/CyberhavenInc/webext-bridge-typed/issues"
+  },
+  "homepage": "https://github.com/CyberhavenInc/webext-bridge-typed#readme",
   "dependencies": {
     "@types/webextension-polyfill": "^0.8.3",
     "nanoevents": "^6.0.2",
     "serialize-error": "^9.0.0",
     "tiny-uid": "^1.1.1",
+    "webext-detect": "^5.0.2",
     "webextension-polyfill": "^0.9.0"
   },
   "devDependencies": {
