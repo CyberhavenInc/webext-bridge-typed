@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "webext-bridge-typed",
+  "description": "Testing extension for webext-bridge-typed lib",
+  "version": "0.0.1",
+  "permissions": [],
+  "host_permissions": ["*://*/*"],
+  "background": {
+    "service_worker": "./scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["./scripts/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
