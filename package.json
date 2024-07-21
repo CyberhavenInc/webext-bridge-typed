@@ -1,5 +1,5 @@
 {
-  "name": "webext-bridge-typed",
+  "name": "@cyberhaven/webext-bridge-typed",
   "version": "1.0.0",
   "description": "Messaging in Web Extensions made easy. Out of the box.",
   "keywords": [
